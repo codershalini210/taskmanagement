@@ -1,0 +1,11 @@
+first clear all the code form app.html
+
+create a new component with name task use below command for that
+ng g c tasks
+
+createa a new model class with command 
+ng g class tasks/taskModel
+
+createa a new taskservice with command
+ng g s tasks/taskService
+

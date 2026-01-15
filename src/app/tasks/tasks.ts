@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { TaskModel } from './task-model';
 import { TaskService } from './task-service';
 import { CommonModule } from '@angular/common';
+import { TasksIcons } from './tasks-icons/tasks-icons';
 @Component({
   selector: 'app-tasks',
-  imports: [CommonModule],
+  imports: [CommonModule,TasksIcons],
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',
 })

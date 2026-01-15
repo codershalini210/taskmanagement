@@ -1,6 +1,6 @@
 <div class="container text-center">
   <!-- <img src="../../../public/assets/img/task.png" alt="Task" /> -->
- <div class="container">
+   <div class="container">
     <div>
       <h3>
         {{queuedTasks | i18nPlural:queuedHeaderMapping}}
@@ -10,6 +10,18 @@
         </span>
       </h3>
     </div>
+
+    <p>
+      <span *ngFor="let queuedTask of tasks">
+        <app-tasks-icons
+        [task]="queuedTask"
+        size="20"
+        (mouseover)="tooltip.innerText = queuedTask.name"
+        (mouseout)="tooltip.innerText = 'Mouseover for details'">
+        </app-tasks-icons>
+      </span>
+    </p>
+    <p #tooltip [hidden]="queued === 0" class = text-info>Mouseover for details</p>
 
 
   <div class="container">
